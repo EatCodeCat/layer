@@ -87,7 +87,7 @@ Layer.prototype.view = function(){
     config.content = '<i></i><i class="layui-m-layerload"></i><i></i><p>'+ (config.content||'') +'</p>';
   }
   
-  if(config.skin) config.anim = 'up';
+  if(config.skin && config.anim) config.anim = 'up';
   if(config.skin === 'msg') config.shade = false;
   
   layerbox.innerHTML = (config.shade ? '<div '+ (typeof config.shade === 'string' ? 'style="'+ config.shade +'"' : '') +' class="layui-m-layershade"></div>' : '')
